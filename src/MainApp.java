@@ -1,5 +1,6 @@
 import modelos.Pelicula;
 import modelos.Serie;
+import modelos.Titulo;
 
 import java.util.ArrayList;
 
@@ -71,9 +72,28 @@ public class MainApp {
         System.out.println("Primera película de la lista: " + listaDePeliculas.getFirst().getNombre());
         System.out.println("Segunda película de la lista: " + listaDePeliculas.getLast().getNombre());
         //mostrar una película por su índice y obtener sus datos con el get
-        System.out.println("Película del index 2: " + listaDePeliculas.get(2).getNombre() + " " + "(" + listaDePeliculas.get(2).getFechaDeLanzamiento() + ")");
+        System.out.println("Película del index 2: " + listaDePeliculas.get(2).getNombre() + " " + "(" + listaDePeliculas.get(2).getFechaDeLanzamiento() + ")\n");
 
+        //lista de series
+        ArrayList<Serie> listaDeSeries = new ArrayList<>();
+        listaDeSeries.add(serie1);
+        listaDeSeries.add(serie2);
+        listaDeSeries.add(serie3);
+        listaDeSeries.add(serie4);
 
+        System.out.println("Nro de series en la lista: " + listaDeSeries.size());
+        System.out.println("Primera serie de la lista: " + listaDeSeries.getFirst().getNombre());
+        System.out.println("Última serie de la lista: " + listaDeSeries.getLast().getNombre());
+        System.out.println("Serie del index 2: " + listaDeSeries.get(2).getNombre() + " " + "(" + listaDeSeries.get(2).getTemporadas() + " temporadas)\n");
 
+        ArrayList<Titulo> lista = new ArrayList<>();
+        lista.add(peli1);
+        lista.add(serie2);
+        lista.add(peli3);
+        lista.add(serie4);
+
+        for (Titulo item : lista){
+            System.out.println(item);
+        }
     }
 }
