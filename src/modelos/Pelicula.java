@@ -9,8 +9,15 @@ public class Pelicula extends Titulo implements Clasificacion {
         super();
     }
 
-    public Pelicula(String nombre, int fechaDeLanzamiento, boolean incluidoEnPlan, int duracionEnMinutos, String director) {
-        super(nombre, fechaDeLanzamiento, incluidoEnPlan, duracionEnMinutos);
+    public Pelicula(String nombre,
+                    int fechaDeLanzamiento,
+                    boolean incluidoEnPlan,
+                    int duracionEnMinutos,
+                    String director) {
+        super(nombre,
+              fechaDeLanzamiento,
+              incluidoEnPlan,
+              duracionEnMinutos);
         this.director = director;
     }
 

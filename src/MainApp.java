@@ -37,11 +37,26 @@ public class MainApp {
                                  10,
                                  60);
         //Serie 2
-        Serie serie2 = new Serie();
+        Serie serie2 = new Serie("Merli",
+                                 2017,
+                                 true,
+                                 3,
+                                 10,
+                                 55);
         //Serie 3
-        Serie serie3 = new Serie();
+        Serie serie3 = new Serie("The Walking Dead",
+                                 2014,
+                                 true,
+                                 9,
+                                 10,
+                                 53);
         //Serie 4
-        Serie serie4 = new Serie();
+        Serie serie4 = new Serie("Los Simuladores",
+                                 2006,
+                                 true,
+                                 4,
+                                 8,
+                                 45);
 
         //lista de películas
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();

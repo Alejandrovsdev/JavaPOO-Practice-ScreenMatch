@@ -9,15 +9,31 @@ public class Serie extends Titulo {
         super();
     }
 
-    public Serie(String nombre, int fechaDeLanzamiento, boolean incluidoEnPlan, int temporadas, int episodiosPorTemporada, int minutosPorEpisodio) {
-        super(nombre, fechaDeLanzamiento, incluidoEnPlan);
+    public Serie(String nombre,
+                 int fechaDeLanzamiento,
+                 boolean incluidoEnPlan,
+                 int temporadas,
+                 int episodiosPorTemporada,
+                 int minutosPorEpisodio) {
+        super(nombre,
+              fechaDeLanzamiento,
+              incluidoEnPlan);
         this.temporadas = temporadas;
         this.episodiosPorTemporada = episodiosPorTemporada;
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
-    public Serie(String nombre, int fechaDeLanzamiento, boolean incluidoEnPlan, int duracionEnMinutos, int episodiosPorTemporada, int temporadas, int minutosPorEpisodio) {
-        super(nombre, fechaDeLanzamiento, incluidoEnPlan, duracionEnMinutos);
+    public Serie(String nombre,
+                 int fechaDeLanzamiento,
+                 boolean incluidoEnPlan,
+                 int duracionEnMinutos,
+                 int episodiosPorTemporada,
+                 int temporadas,
+                 int minutosPorEpisodio) {
+        super(nombre,
+              fechaDeLanzamiento,
+              incluidoEnPlan,
+              duracionEnMinutos);
         this.episodiosPorTemporada = episodiosPorTemporada;
         this.temporadas = temporadas;
         this.minutosPorEpisodio = minutosPorEpisodio;
