@@ -1,6 +1,6 @@
 package modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     private String nombre;
     private int fechaDeLanzamiento;
     private boolean incluidoEnPlan;
@@ -92,5 +92,11 @@ public class Titulo {
             return 0; // Evita la división por cero
         }
         return (double) sumaDeLasEvaluaciones / TotalDeEvaluaciones;
+    }
+
+    // este método de la interfaz Comparable sobreescribe el orden natural de ordenamiento comparando el nombre de los títulos
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
     }
 }

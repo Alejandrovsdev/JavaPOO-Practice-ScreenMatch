@@ -3,6 +3,8 @@ import modelos.Serie;
 import modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -12,24 +14,37 @@ public class MainApp {
                                       true,
                                       120,
                                       "James Cameron");
+        peli1.evalua(10);
+        peli1.evalua(9);
+        peli1.evalua(10);
+        peli1.evalua(8.5);
         // Pelicula 2
         Pelicula peli2 = new Pelicula("The Avengers",
                                       2010,
                                       true,
                                       140,
                                       "Kevin Feigi");
+        peli2.evalua(8.5);
+        peli2.evalua(9);
+        peli2.evalua(7.5);
         // Pelicula 3
         Pelicula peli3 = new Pelicula("Mr and Mrs. Smith",
                                       2009,
                                       true,
                                       110,
                                       "Brad Pitt");
+        peli3.evalua(7.5);
+        peli3.evalua(6.5);
+        peli3.evalua(7);
+        peli3.evalua(6.5);
         // Pelicula 4
         Pelicula peli4 = new Pelicula("Frozen",
                                       2017,
                                       true,
                                       120,
                                       "John Doe");
+        peli4.evalua(8);
+        peli4.evalua(9);
         // Serie 1
         Serie serie1 = new Serie("Game of Thrones",
                                  2010,
@@ -92,8 +107,23 @@ public class MainApp {
         lista.add(peli3);
         lista.add(serie4);
 
-        for (Titulo item : lista){
-            System.out.println(item);
+        for (Pelicula item : listaDePeliculas){
+            System.out.println("La clasificación de " + item.getNombre() + ": " + item.getClasificacion() + " Estrellas");
         }
+
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Leonardo Di Caprio");
+        listaDeArtistas.add("Penélope Cruz");
+        listaDeArtistas.add("Antonio Banderas");
+        listaDeArtistas.add("Ricardo Darín");
+
+        System.out.println("\n" + listaDeArtistas + "\n");
+        Collections.sort(listaDeArtistas); // sort ordena las listas en orden ascendente
+        System.out.println(listaDeArtistas + "\n");
+        System.out.println(lista + "\n");
+        Collections.sort(lista); // compara y ordena diferentes tipos de títulos (Peliculas con Series), gracias a implementar la interfaz comparable a la clase madre Título.
+        System.out.println(lista);
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento)); // compara y ordena por fecha de lanzamiento empezando por la más antigua a la más nueva
+        System.out.println("\n" + lista);
     }
 }
